@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ffffffff">#000000</color>
+    <color name="ffffff">#000000</color>
+    <color name="ffff">#8A8A8A</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSecondary">#03DAC6</color>
+
+    <!-- Background / Surface -->
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#F9F9F9</color>
+
+    <!-- Text -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorOnSurface">#333333</color>
+
+    <color name="noteCard">#FFFDF5</color> <!-- warm off-white -->
+    <color name="noteTitle">#202124</color>
+    <color name="noteContent">#5F6368</color>
+    <color name="noteTime">#9AA0A6</color>
+    <color name="green">#83FF00</color>
+</resources>

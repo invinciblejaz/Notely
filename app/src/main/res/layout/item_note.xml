@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/noteCard"
+    app:cardElevation="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:minHeight="80dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/tvNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/noteTitle"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Content preview -->
+        <TextView
+            android:id="@+id/tvNoteContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Some preview text goes here..."
+            android:textSize="14sp"
+            android:textColor="@color/noteContent"
+            android:maxLines="5"
+            android:ellipsize="end" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tvNoteTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="12 Mar, 08:45 PM"
+            android:textSize="11sp"
+            android:textColor="@color/noteTime" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
