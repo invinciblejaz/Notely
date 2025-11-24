@@ -29,7 +29,7 @@ Each user has their own private notes in the cloud — create, edit, delete and 
 
 | Login | Notes List | Add Note | Edit Note |
 |-------|------------|----------|-----------|
-| <img src="./screenshots/01_login.png" width="210"/> | <img src="./screenshots/02_notes_list.png" width="210"/> | <img src="./screenshots/03_add_notes.png" width="210"/> | <img src="./screenshots/04_edit_notes.png" width="210"/> |
+| <img src="./screenshots/01_login.png" width="210"/> | <img src="./screenshots/02_notes_list.png" width="210"/> | <img src="./screenshots/03_add_note.png" width="210"/> | <img src="./screenshots/04_edit_note.png" width="210"/> |
 
 ---
 
@@ -42,3 +42,4 @@ https://github.com/invinciblejaz/Notely/releases
 ---
 
 ## 🚀 Project Structure (Overview)
+
