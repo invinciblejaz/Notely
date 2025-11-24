@@ -42,4 +42,42 @@ https://github.com/invinciblejaz/Notely/releases
 ---
 
 ## 🚀 Project Structure (Overview)
+app/
+└ java/
+└ com.myapp.notely/
+├─ LoginActivity
+├─ SignupActivity
+├─ MainActivity
+├─ AddNoteActivity
+├─ EditNoteActivity
+├─ adapters/
+├─ models/
+└─ utils/
+
+
+---
+
+## 🛡 Security
+- `google-services.json` is **not committed**
+- `.idea/` and other IDE-generated files are **ignored** using `.gitignore`
+
+---
+
+## 💡 Future Improvements (planned)
+- 🔍 Search notes
+- 🌙 Dark Theme
+- 📤 Export notes / share note as text
+- 📱 Better UI for pinned notes section
+- ⚡ Offline caching (Room + Firestore sync)
+
+---
+
+### 🧑‍💻 Author
+**Jass (invinciblejaz)**  
+If you’d like to collaborate or give feedback, feel free to open an issue or reach out.
+
+---
+
+⭐ If you like this project, consider giving the repo a **star**!
+
 
