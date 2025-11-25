@@ -50,6 +50,7 @@
                     android:id="@+id/etTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:imeOptions="actionNext"
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -74,6 +75,7 @@
                     android:minLines="10"
                     android:gravity="top|start"
                     android:inputType="textMultiLine"
+                    android:textColor="@color/black"
                     android:overScrollMode="ifContentScrolls"
                     android:scrollbars="vertical" />
             </com.google.android.material.textfield.TextInputLayout>
