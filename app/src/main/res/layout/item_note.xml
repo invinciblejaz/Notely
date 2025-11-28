@@ -1,57 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
-    app:cardCornerRadius="16dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="@color/noteCard"
-    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="6dp"
+    app:strokeWidth="0dp"
     android:foreground="?attr/selectableItemBackground"
-    android:minHeight="80dp">
+    android:minHeight="120dp">
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="20dp">
 
+        <View
+            android:id="@+id/accentBar"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#2EC8B8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
             android:id="@+id/tvNoteTitle"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="Note title"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@color/noteTitle"
+            android:textSize="18sp"
+            android:textColor="#1A1A1A"
             android:maxLines="2"
-            android:ellipsize="end" />
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/accentBar"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Content preview -->
         <TextView
             android:id="@+id/tvNoteContent"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="Some preview text goes here..."
-            android:textSize="14sp"
-            android:textColor="@color/noteContent"
-            android:maxLines="5"
-            android:ellipsize="end" />
+            android:textSize="15sp"
+            android:textColor="#666666"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteTitle"
+            app:layout_constraintStart_toEndOf="@id/accentBar"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- Time -->
-        <TextView
-            android:id="@+id/tvNoteTime"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/metaLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="12 Mar, 08:45 PM"
-            android:textSize="11sp"
-            android:textColor="@color/noteTime" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteContent"
+            app:layout_constraintStart_toEndOf="@id/accentBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                android:tint="#999999"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/tvNoteTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 Mar, 08:45 PM"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -5,24 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorBackground">
+    android:background="#FAFAFA">
 
-    <!-- Top App Bar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBarEdit"
         android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorSurface"
-        android:elevation="4dp"
-        app:title="Edit note"
-        app:titleTextColor="@color/colorOnSurface"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        app:title="Edit Note"
+        app:titleTextColor="#1A1A1A"
+        app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall"
         app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
-        app:navigationIconTint="@color/colorOnSurface"
+        app:navigationIconTint="#1A1A1A"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Scrollable content area -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollArea"
         android:layout_width="0dp"
@@ -37,16 +36,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
-            <!-- Title -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Title"
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                app:boxBackgroundColor="@color/colorSurface"
-                app:boxStrokeColor="@color/colorPrimary"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#2EC8B8"
+                app:hintTextColor="#2EC8B8"
                 app:boxCornerRadiusTopStart="16dp"
                 app:boxCornerRadiusTopEnd="16dp"
                 app:boxCornerRadiusBottomStart="16dp"
@@ -58,23 +56,23 @@
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
                     android:singleLine="true"
-                    android:textColor="@color/colorOnSurface"
-                    android:textSize="16sp" />
+                    android:textColor="#1A1A1A"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:padding="16dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- spacing -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="20dp"/>
 
-            <!-- Content -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Edit your note..."
-                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                app:boxBackgroundColor="@color/colorSurface"
-                app:boxStrokeColor="@color/colorPrimary"
+                android:hint="Write your note..."
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#2EC8B8"
+                app:hintTextColor="#2EC8B8"
                 app:boxCornerRadiusTopStart="16dp"
                 app:boxCornerRadiusTopEnd="16dp"
                 app:boxCornerRadiusBottomStart="16dp"
@@ -84,63 +82,78 @@
                     android:id="@+id/etContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minLines="8"
+                    android:minLines="12"
                     android:gravity="top|start"
-                    android:inputType="textMultiLine"
+                    android:inputType="textMultiLine|textCapSentences"
                     android:overScrollMode="ifContentScrolls"
                     android:scrollbars="vertical"
-                    android:textColor="@color/colorOnSurface"
-                    android:textSize="15sp" />
+                    android:textColor="#1A1A1A"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Bottom action bar -->
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/bottomActions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="16dp"
-        android:weightSum="2"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="0dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Delete: outline / subtle danger -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnDelete"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Delete"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:layout_marginEnd="8dp"
-            android:textColor="@android:color/holo_red_dark"
-            app:strokeColor="@android:color/holo_red_dark"
-            app:strokeWidth="2dp"
-            app:cornerRadius="26dp" />
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="20dp"
+            android:weightSum="2">
 
-        <!-- Update: primary filled pill -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnUpdate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:text="Update"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:insetTop="10dp"
-            android:insetBottom="10dp"
-            app:cornerRadius="26dp"
-            android:backgroundTint="@color/colorPrimary" />
-    </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                android:textColor="#E53935"
+                app:strokeColor="#E53935"
+                app:strokeWidth="2dp"
+                app:cornerRadius="28dp"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconTint="#E53935"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="28dp"
+                app:elevation="4dp"
+                android:backgroundTint="#2EC8B8"
+                app:icon="@android:drawable/ic_menu_save"
+                app:iconTint="#FFFFFF"
+                app:iconGravity="textStart"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
